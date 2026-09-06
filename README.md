@@ -7,23 +7,21 @@
 
 | 游戏 | 文件 | 说明 |
 |---|---|---|
-| 赤色要塞 | [Jackalautosplit.asl](Jackalautosplit.asl) | ye 制作，在每个 STAGE CLEAR 画面切分，最终在 BOSS 击杀后切分 |
-| 洛克人 1 | [lkr1ye.asl](lkr1ye.asl) | ye 制作 |
-| 洛克人 2 | [lkr2ye.asl](lkr2ye.asl) | ye 制作 |
-| 洛克人 3 | [lkr3ye.asl](lkr3ye.asl) | ye 制作 |
-| 洛克人 4 | [lkr4ye.asl](lkr4ye.asl) | ye 制作 |
-| 洛克人 5 | [lkr5ye.asl](lkr5ye.asl) | ye 制作，黑屏切段 |
-| 洛克人 5 | [lkr5ye_alt.asl](lkr5ye_alt.asl) | ye 制作，原计时方式 |
-| 洛克人 6 | [lkr6ye.asl](lkr6ye.asl) | ye 制作，仅支持美版 |
+| 赤色要塞 | [Jackalautosplit.asl](Jackalautosplit.asl) | 在每个 STAGE CLEAR 画面切分，最终在 BOSS 击杀后切分 |
+| 洛克人 1 | [lkr1ye.asl](lkr1ye.asl) |  |
+| 洛克人 2 | [lkr2ye.asl](lkr2ye.asl) |  |
+| 洛克人 3 | [lkr3ye.asl](lkr3ye.asl) |  |
+| 洛克人 4 | [lkr4ye.asl](lkr4ye.asl) |  |
+| 洛克人 5 | [lkr5ye.asl](lkr5ye.asl) | 黑屏切段 |
+| 洛克人 5 | [lkr5ye_alt.asl](lkr5ye_alt.asl) | 原计时方式 |
+| 洛克人 6 | [lkr6ye.asl](lkr6ye.asl) | 仅支持美版 |
 
 > 洛克人 5 提供两版脚本：`lkr5ye.asl` 为黑屏淡出（fade）切段版；`lkr5ye_alt.asl` 为原计时方式版，
 > 二者按你的分段习惯选用其一即可。
 
-## 声明与许可
+## 声明
 
-- MM1–MM6 各脚本（`lkr1ye.asl` ~ `lkr6ye.asl`）由 **ye** 以原创方式重写，全部基于公开内存地址；
-- `lkr5ye.asl`、`lkr5ye_alt.asl`、`Jackalautosplit.asl` 亦为 **ye** 原创；
-- 本仓库脚本与文档均采用 **MIT 协议** 开源，详见 [LICENSE](LICENSE)。
+- 本仓库的自动切分脚本均为独立编写的原创作品。
 
 ## 支持的模拟器
 

@@ -8,24 +8,21 @@ automatically at level / boss milestones.
 
 | Game | File | Notes |
 |---|---|---|
-| Jackal | [Jackalautosplit.asl](Jackalautosplit.asl) | By ye. Splits on every STAGE CLEAR screen, final split on boss kill |
-| Mega Man 1 | [lkr1ye.asl](lkr1ye.asl) | By ye |
-| Mega Man 2 | [lkr2ye.asl](lkr2ye.asl) | By ye |
-| Mega Man 3 | [lkr3ye.asl](lkr3ye.asl) | By ye |
-| Mega Man 4 | [lkr4ye.asl](lkr4ye.asl) | By ye |
-| Mega Man 5 | [lkr5ye.asl](lkr5ye.asl) | By ye, splits on black-screen fades |
-| Mega Man 5 | [lkr5ye_alt.asl](lkr5ye_alt.asl) | By ye, original-timing splits |
-| Mega Man 6 | [lkr6ye.asl](lkr6ye.asl) | By ye, **US version only** |
+| Jackal | [Jackalautosplit.asl](Jackalautosplit.asl) | Splits on every STAGE CLEAR screen, final split on boss kill |
+| Mega Man 1 | [lkr1ye.asl](lkr1ye.asl) |  |
+| Mega Man 2 | [lkr2ye.asl](lkr2ye.asl) |  |
+| Mega Man 3 | [lkr3ye.asl](lkr3ye.asl) |  |
+| Mega Man 4 | [lkr4ye.asl](lkr4ye.asl) |  |
+| Mega Man 5 | [lkr5ye.asl](lkr5ye.asl) | Splits on black-screen fades |
+| Mega Man 5 | [lkr5ye_alt.asl](lkr5ye_alt.asl) | Original-timing splits |
+| Mega Man 6 | [lkr6ye.asl](lkr6ye.asl) | **US version only** |
 
 > Mega Man 5 has two scripts: `lkr5ye.asl` (black-screen fade splits) and `lkr5ye_alt.asl`
 > (original-timing splits). Pick whichever matches your segment layout.
 
-## Declarations & License
+## Declarations
 
-- MM1–MM6 (`lkr1ye.asl` – `lkr6ye.asl`) were rewritten as original works by **ye**, based on
-  publicly available memory addresses.
-- `lkr5ye.asl`, `lkr5ye_alt.asl` and `Jackalautosplit.asl` are also original works by **ye**.
-- All scripts and documentation here are released under the **MIT License**. See [LICENSE](LICENSE).
+- All autosplitter scripts in this repository are independently written original works.
 
 ## Supported emulators
 
