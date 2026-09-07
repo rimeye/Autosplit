@@ -61,13 +61,13 @@ state("fceux64", "2.6.6")
 
 startup
 {
-	settings.Add("optionsection", true, "---Options---");
-	settings.Add("darkfade", true, "Split on black screen after Mega Man vanishes in Dark 4", "optionsection");
+	settings.Add("optionsection", true, "---选项---");
+	settings.Add("darkfade", true, "在洛克人于Dark 4消失后的黑屏处切分", "optionsection");
 
-	settings.Add("infosection", true, "---Info---");
-	settings.Add("info", true, "Mega Man 5 Autosplitter by ye", "infosection");
-	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat)", "infosection");
-	settings.Add("info1", true, "- Bilibili: https://space.bilibili.com/388291446", "infosection");
+	settings.Add("infosection", true, "---信息---");
+	settings.Add("info", true, "《洛克人5》自动切分（黑屏淡出版）：在关卡切换的黑屏时切分，可在设置中开启Dark 4淡出切分", "infosection");
+	settings.Add("info0", true, "- 支持模拟器：Mesen2.1.1、Mesen0.9.9、MesenRTA、fceux-2.6.6-y320-Win64-汉化版（Emucheat）", "infosection");
+	settings.Add("info1", true, "- Bilibili：https://space.bilibili.com/388291446", "infosection");
 }
 
 init

@@ -13,10 +13,10 @@
 | 洛克人 3 | [lkr3ye.asl](lkr3ye.asl) |  |
 | 洛克人 4 | [lkr4ye.asl](lkr4ye.asl) |  |
 | 洛克人 5 | [lkr5ye.asl](lkr5ye.asl) | 黑屏切段 |
-| 洛克人 5 | [lkr5ye_alt.asl](lkr5ye_alt.asl) | 原计时方式 |
+| 洛克人 5 | [lkr5ye_alt.asl](lkr5ye_alt.asl) | 升天计时方式 |
 | 洛克人 6 | [lkr6ye.asl](lkr6ye.asl) | 仅支持美版 |
 
-> 洛克人 5 提供两版脚本：`lkr5ye.asl` 为黑屏淡出（fade）切段版；`lkr5ye_alt.asl` 为原计时方式版，
+> 洛克人 5 提供两版脚本：`lkr5ye.asl` 为黑屏淡出（fade）切段版；`lkr5ye_alt.asl` 为升天计时方式版，
 > 二者按你的分段习惯选用其一即可。
 
 ## 声明

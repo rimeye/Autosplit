@@ -50,12 +50,12 @@ state("fceux64", "2.6.6")
 
 startup
 {
-	settings.Add("optionsection", true, "---Options---");
-	settings.Add("onteleport", true, "Split after teleport instead of boss kill", "optionsection");
+	settings.Add("optionsection", true, "---选项---");
+	settings.Add("onteleport", true, "改为在传送后切分（而非击杀BOSS时）", "optionsection");
 
-	settings.Add("infosection", true, "---Info---");
-	settings.Add("info", true, "Mega Man 6 Autosplitter by ye (US version only)", "infosection");
-	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat)", "infosection");
+	settings.Add("infosection", true, "---信息---");
+	settings.Add("info", true, "《洛克人6》自动切分（仅支持美版）：默认击杀BOSS切分，可在设置中改为传送后切分", "infosection");
+	settings.Add("info0", true, "- 支持模拟器：Mesen2.1.1、Mesen0.9.9、MesenRTA、fceux-2.6.6-y320-Win64-汉化版（Emucheat）", "infosection");
 }
 
 init

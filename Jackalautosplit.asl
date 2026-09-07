@@ -43,12 +43,12 @@ state("fceux64", "2.6.6")
 
 startup
 {
-	settings.Add("infosection", true, "---Info---");
-	settings.Add("info", true, "Jackal Autosplitter made by ye 7/21/2026", "infosection");
-	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat)", "infosection");
-	settings.Add("info1", true, "- Splits on each STAGE CLEAR screen", "infosection");
-	settings.Add("info2", true, "- Final split on boss kill (Stage 6 tank dies)", "infosection");
-	settings.Add("info3", true, "- Bilibili: https://space.bilibili.com/388291446", "infosection");
+	settings.Add("infosection", true, "---信息---");
+	settings.Add("info", true, "《赤色要塞》自动切分：在每个STAGE CLEAR画面切分，最后在击杀BOSS（第6关坦克）时切分", "infosection");
+	settings.Add("info0", true, "- 支持模拟器：Mesen2.1.1、Mesen0.9.9、MesenRTA、fceux-2.6.6-y320-Win64-汉化版（Emucheat）", "infosection");
+	settings.Add("info1", true, "- 每一关在 STAGE CLEAR 画面切分一次", "infosection");
+	settings.Add("info2", true, "- 最终在击杀第6关BOSS（坦克）时切分", "infosection");
+	settings.Add("info3", true, "- Bilibili：https://space.bilibili.com/388291446", "infosection");
 
 }
 

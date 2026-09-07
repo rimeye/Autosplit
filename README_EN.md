@@ -14,7 +14,7 @@ automatically at level / boss milestones.
 | Mega Man 3 | [lkr3ye.asl](lkr3ye.asl) |  |
 | Mega Man 4 | [lkr4ye.asl](lkr4ye.asl) |  |
 | Mega Man 5 | [lkr5ye.asl](lkr5ye.asl) | Splits on black-screen fades |
-| Mega Man 5 | [lkr5ye_alt.asl](lkr5ye_alt.asl) | Original-timing splits |
+| Mega Man 5 | [lkr5ye_alt.asl](lkr5ye_alt.asl) | Ascension-timing splits |
 | Mega Man 6 | [lkr6ye.asl](lkr6ye.asl) | **US version only** |
 
 > Mega Man 5 has two scripts: `lkr5ye.asl` (black-screen fade splits) and `lkr5ye_alt.asl`

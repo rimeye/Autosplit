@@ -54,9 +54,9 @@ state("fceux64", "2.6.6")
 
 startup
 {
-	settings.Add("infosection", true, "---Info---");
-	settings.Add("info", true, "Mega Man 1 Autosplitter by ye", "infosection");
-	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat)", "infosection");
+	settings.Add("infosection", true, "---信息---");
+	settings.Add("info", true, "《洛克人1》自动切分：击杀BOSS或通关时切分", "infosection");
+	settings.Add("info0", true, "- 支持模拟器：Mesen2.1.1、Mesen0.9.9、MesenRTA、fceux-2.6.6-y320-Win64-汉化版（Emucheat）", "infosection");
 }
 
 init

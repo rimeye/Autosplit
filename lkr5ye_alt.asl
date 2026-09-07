@@ -1,4 +1,4 @@
-//Mega Man 5 Autosplitter by ye (original timing)
+//Mega Man 5 Autosplitter by ye (ascension timing)
 //split on teleport (or Dark 4 fade if enabled)
 //alternative to lkr5ye.asl (black-screen split)
 //Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat)
@@ -63,13 +63,13 @@ state("fceux64", "2.6.6")
 
 startup
 {
-	settings.Add("optionsection", true, "---Options---");
-	settings.Add("darkfade", true, "Split on initial Dark 4 fade", "optionsection");
+	settings.Add("optionsection", true, "---选项---");
+	settings.Add("darkfade", true, "在Dark 4首次淡出处切分", "optionsection");
 
-	settings.Add("infosection", true, "---Info---");
-	settings.Add("info", true, "Mega Man 5 Autosplitter by ye (original timing)", "infosection");
-	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat)", "infosection");
-	settings.Add("info1", true, "- Other version (black-screen split): lkr5ye.asl", "infosection");
+	settings.Add("infosection", true, "---信息---");
+	settings.Add("info", true, "《洛克人5》自动切分（升天计时方式）：默认在传送时切分，可在设置中开启Dark 4淡出切分", "infosection");
+	settings.Add("info0", true, "- 支持模拟器：Mesen2.1.1、Mesen0.9.9、MesenRTA、fceux-2.6.6-y320-Win64-汉化版（Emucheat）", "infosection");
+	settings.Add("info1", true, "- 另一种版本（黑屏切分）：lkr5ye.asl", "infosection");
 }
 
 init
