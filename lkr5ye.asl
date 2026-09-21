@@ -1,4 +1,4 @@
-//Mega Man 5 Autosplitter by Rime 2026-07-14
+//Mega Man 5 Autosplitter by ye 2026-07-14
 //added Mesen0.9.9 support
 
 state("Mesen", "0.0.7")
@@ -65,7 +65,7 @@ startup
 	settings.Add("darkfade", true, "Split on black screen after Mega Man vanishes in Dark 4", "optionsection");
 
 	settings.Add("infosection", true, "---Info---");
-	settings.Add("info", true, "Mega Man 5 Autosplitter by Rime", "infosection");
+	settings.Add("info", true, "Mega Man 5 Autosplitter by ye", "infosection");
 	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat)", "infosection");
 	settings.Add("info1", true, "- Bilibili: https://space.bilibili.com/388291446", "infosection");
 }
