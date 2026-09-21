@@ -33,7 +33,7 @@
 - **Mesen 0.9.9**
 - **MesenRTA（0.0.7）**
 - **fceux-2.6.6-y320-Win64-汉化版（Emucheat）**
-- **FCEUX2.2.3.3256汉化版**（`D:\ye\FC\FCEUX2.2.3\fceux.exe`）
+- **FCEUX2.2.3.3256汉化版**
 
 脚本会在载入时自动识别模拟器版本：
 
