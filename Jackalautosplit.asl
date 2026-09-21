@@ -1,5 +1,5 @@
 //Jackal Autosplitter made by ye 7/21/2026
-//added Mesen2.1.1, Mesen0.9.9, MesenRTA and fceux-2.6.6-y320-Win64-汉化版 (Emucheat) support
+//added Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat) and FCEUX2.2.3.3256汉化版 support
 
 //MesenRTA
 state("Mesen", "0.0.7")
@@ -41,11 +41,21 @@ state("fceux64", "2.6.6")
 	byte bossflag  : "fceux64.exe", 0x6c75d0, 0x73F;
 }
 
+// FCEUX2.2.3.3256汉化版
+state("fceux", "2.2.3.3256")
+{
+	byte gamestate : "fceux.exe", 0x3C920C, 0x18;
+	byte stage     : "fceux.exe", 0x3C920C, 0x30;
+	byte lives     : "fceux.exe", 0x3C920C, 0x31;
+	byte bosshp    : "fceux.exe", 0x3C920C, 0x74F;
+	byte bossflag  : "fceux.exe", 0x3C920C, 0x73F;
+}
+
 startup
 {
 	settings.Add("infosection", true, "---Info---");
 	settings.Add("info", true, "Jackal Autosplitter made by ye 7/21/2026", "infosection");
-	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat)", "infosection");
+	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat), FCEUX2.2.3.3256汉化版", "infosection");
 	settings.Add("info1", true, "- Splits on each STAGE CLEAR screen", "infosection");
 	settings.Add("info2", true, "- Final split on boss kill (Stage 6 tank dies)", "infosection");
 	settings.Add("info3", true, "- Bilibili: https://space.bilibili.com/388291446", "infosection");
@@ -57,7 +67,9 @@ init
 	refreshRate = 60;
 	vars.bossFightActive = 0;
 
-	if (modules.First().ModuleMemorySize == 0x934000)
+	if (game.ProcessName == "fceux" && modules.First().ModuleMemorySize == 0x417000)
+		version = "2.2.3.3256";
+	else if (modules.First().ModuleMemorySize == 0x934000)
 		version = "2.6.6";
 
 	if(game.ProcessName == "Mesen")

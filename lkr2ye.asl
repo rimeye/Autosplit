@@ -1,6 +1,6 @@
 //Mega Man 2 Autosplitter by ye
 //split on boss kill (or on teleport if enabled)
-//Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat)
+//Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat), FCEUX2.2.3.3256汉化版
 
 // ---- 状态定义（仅不同模拟器版本的基址不同，偏移一致）----
 
@@ -52,6 +52,18 @@ state("fceux64", "2.6.6")
 	byte stage        : "fceux64.exe", 0x6c75d0, 0x2A;
 }
 
+// FCEUX2.2.3.3256汉化版
+state("fceux", "2.2.3.3256")
+{
+	byte bosshp       : "fceux.exe", 0x3C920C, 0x6C1;
+	byte myhp         : "fceux.exe", 0x3C920C, 0x6C0;
+	byte mylives      : "fceux.exe", 0x3C920C, 0xA8;
+	byte mytitlescreen: "fceux.exe", 0x3C920C, 0x04B0;
+	byte mycontroller : "fceux.exe", 0x3C920C, 0x25;
+	byte soundfx      : "fceux.exe", 0x3C920C, 0xE2;
+	byte stage        : "fceux.exe", 0x3C920C, 0x2A;
+}
+
 startup
 {
 	settings.Add("optionsection", true, "---Options---");
@@ -59,7 +71,7 @@ startup
 
 	settings.Add("infosection", true, "---Info---");
 	settings.Add("info", true, "Mega Man 2 Autosplitter by ye", "infosection");
-	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat)", "infosection");
+	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat), FCEUX2.2.3.3256汉化版", "infosection");
 }
 
 init
@@ -72,7 +84,9 @@ init
 	vars.frames     = 0;  // 阵亡后的宽限帧计数
 	vars.rushDone   = 0;  // BOSS 连战是否全部完成
 
-	if (modules.First().ModuleMemorySize == 0x934000)
+	if (game.ProcessName == "fceux" && modules.First().ModuleMemorySize == 0x417000)
+		version = "2.2.3.3256";
+	else if (modules.First().ModuleMemorySize == 0x934000)
 		version = "2.6.6";
 
 	if (game.ProcessName == "Mesen")

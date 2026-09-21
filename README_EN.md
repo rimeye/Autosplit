@@ -35,11 +35,12 @@ Currently supported emulators:
 - **Mesen 0.9.9**
 - **MesenRTA (0.0.7)**
 - **fceux-2.6.6-y320-Win64-汉化版 (Emucheat)**
+- **FCEUX2.2.3.3256汉化版** (`D:\ye\FC\FCEUX2.2.3\fceux.exe`)
 
 The script auto-detects the emulator version on load:
 
 - Mesen family: picks the version by comparing the SHA1 of `MesenCore.dll`;
-- FCEUX: identifies the 64-bit 汉化版 (Emucheat) build by module memory size.
+- FCEUX: selects the build from the process name and module memory base.
 
 ## Usage
 

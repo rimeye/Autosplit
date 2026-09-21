@@ -33,11 +33,12 @@
 - **Mesen 0.9.9**
 - **MesenRTA（0.0.7）**
 - **fceux-2.6.6-y320-Win64-汉化版（Emucheat）**
+- **FCEUX2.2.3.3256汉化版**（`D:\ye\FC\FCEUX2.2.3\fceux.exe`）
 
 脚本会在载入时自动识别模拟器版本：
 
 - Mesen 系列：通过比对 `MesenCore.dll` 的 SHA1 自动选择对应版本；
-- FCEUX：按进程模块大小识别 64 位汉化版（Emucheat）。
+- FCEUX：按进程名和模块内存基址识别对应版本。
 
 ## 使用方法
 
