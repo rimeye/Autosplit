@@ -59,6 +59,17 @@ state("fceux", "2.2.3.3256")
 	byte soundfx       : "fceux.exe", 0x3C920C, 0x702;
 }
 
+// fceux-2.6.6-y320-Win32-汉化特供版
+state("fceux", "2.6.6-y320-Win32")
+{
+	byte myhp          : "fceux.exe", 0x5372A0, 0x3E5;
+	byte bosshp        : "fceux.exe", 0x5372A0, 0x3ED;
+	byte stage         : "fceux.exe", 0x5372A0, 0x51;
+	byte currentscreen : "fceux.exe", 0x5372A0, 0x92;
+	byte mymenuselection : "fceux.exe", 0x5372A0, 0x5B1;
+	byte soundfx       : "fceux.exe", 0x5372A0, 0x702;
+}
+
 startup
 {
 	settings.Add("optionsection", true, "---Options---");
@@ -66,7 +77,7 @@ startup
 
 	settings.Add("infosection", true, "---Info---");
 	settings.Add("info", true, "Mega Man 6 Autosplitter by ye (US version only)", "infosection");
-	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat), FCEUX2.2.3.3256汉化版", "infosection");
+	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat), FCEUX2.2.3.3256汉化版, fceux-2.6.6-y320-Win32-汉化特供版", "infosection");
 }
 
 init
@@ -77,7 +88,9 @@ init
 	vars.knewDead  = 0;  // 是否刚阵亡
 	vars.frames    = 0;  // 阵亡后的宽限帧计数
 
-	if (game.ProcessName == "fceux" && modules.First().ModuleMemorySize == 0x417000)
+	if (game.ProcessName == "fceux" && modules.First().ModuleMemorySize == 0x72D000)
+		version = "2.6.6-y320-Win32";
+	else if (game.ProcessName == "fceux" && modules.First().ModuleMemorySize == 0x417000)
 		version = "2.2.3.3256";
 	else if (modules.First().ModuleMemorySize == 0x934000)
 		version = "2.6.6";

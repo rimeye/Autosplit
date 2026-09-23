@@ -74,6 +74,21 @@ state("fceux", "2.2.3.3256")
 	byte fade : "fceux.exe", 0x3C920C, 0x612;
 }
 
+// fceux-2.6.6-y320-Win32-汉化特供版
+state("fceux", "2.6.6-y320-Win32")
+{
+	byte enemyhp : "fceux.exe", 0x5372A0, 0x458;
+	byte enemyid : "fceux.exe", 0x5372A0, 0x440;
+	byte myhp : "fceux.exe", 0x5372A0, 0xB0;
+	byte soundfx : "fceux.exe", 0x5372A0, 0x702;
+	byte stage : "fceux.exe", 0x5372A0, 0x26;
+	byte screenassets : "fceux.exe", 0x5372A0, 0x611;
+	byte otherscreenassets : "fceux.exe", 0x5372A0, 0x18B;
+	byte levelscreen : "fceux.exe", 0x5372A0, 0xF9;
+	byte controller : "fceux.exe", 0x5372A0, 0x16;
+	byte fade : "fceux.exe", 0x5372A0, 0x612;
+}
+
 startup
 {
 	settings.Add("optionsection", true, "---Options---");
@@ -81,7 +96,7 @@ startup
 
 	settings.Add("infosection", true, "---Info---");
 	settings.Add("info", true, "Mega Man 5 Autosplitter by ye", "infosection");
-	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat), FCEUX2.2.3.3256汉化版", "infosection");
+	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat), FCEUX2.2.3.3256汉化版, fceux-2.6.6-y320-Win32-汉化特供版", "infosection");
 	settings.Add("info1", true, "- Bilibili: https://space.bilibili.com/388291446", "infosection");
 }
 
@@ -91,7 +106,9 @@ init
 	vars.waitingForBlack = false;
 	vars.waitingForDark4 = false;
 
-	if (game.ProcessName == "fceux" && modules.First().ModuleMemorySize == 0x417000)
+	if (game.ProcessName == "fceux" && modules.First().ModuleMemorySize == 0x72D000)
+		version = "2.6.6-y320-Win32";
+	else if (game.ProcessName == "fceux" && modules.First().ModuleMemorySize == 0x417000)
 		version = "2.2.3.3256";
 	else if (modules.First().ModuleMemorySize == 0x934000)
 		version = "2.6.6";

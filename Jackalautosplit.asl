@@ -51,11 +51,21 @@ state("fceux", "2.2.3.3256")
 	byte bossflag  : "fceux.exe", 0x3C920C, 0x73F;
 }
 
+// fceux-2.6.6-y320-Win32-汉化特供版
+state("fceux", "2.6.6-y320-Win32")
+{
+	byte gamestate : "fceux.exe", 0x5372A0, 0x18;
+	byte stage     : "fceux.exe", 0x5372A0, 0x30;
+	byte lives     : "fceux.exe", 0x5372A0, 0x31;
+	byte bosshp    : "fceux.exe", 0x5372A0, 0x74F;
+	byte bossflag  : "fceux.exe", 0x5372A0, 0x73F;
+}
+
 startup
 {
 	settings.Add("infosection", true, "---Info---");
 	settings.Add("info", true, "Jackal Autosplitter made by ye 7/21/2026", "infosection");
-	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat), FCEUX2.2.3.3256汉化版", "infosection");
+	settings.Add("info0", true, "- Emulators: Mesen2.1.1, Mesen0.9.9, MesenRTA, fceux-2.6.6-y320-Win64-汉化版 (Emucheat), FCEUX2.2.3.3256汉化版, fceux-2.6.6-y320-Win32-汉化特供版", "infosection");
 	settings.Add("info1", true, "- Splits on each STAGE CLEAR screen", "infosection");
 	settings.Add("info2", true, "- Final split on boss kill (Stage 6 tank dies)", "infosection");
 	settings.Add("info3", true, "- Bilibili: https://space.bilibili.com/388291446", "infosection");
@@ -67,7 +77,9 @@ init
 	refreshRate = 60;
 	vars.bossFightActive = 0;
 
-	if (game.ProcessName == "fceux" && modules.First().ModuleMemorySize == 0x417000)
+	if (game.ProcessName == "fceux" && modules.First().ModuleMemorySize == 0x72D000)
+		version = "2.6.6-y320-Win32";
+	else if (game.ProcessName == "fceux" && modules.First().ModuleMemorySize == 0x417000)
 		version = "2.2.3.3256";
 	else if (modules.First().ModuleMemorySize == 0x934000)
 		version = "2.6.6";
