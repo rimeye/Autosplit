@@ -165,9 +165,12 @@ update {
 		vars.waiting = true;
 
 	// Gemini Man(BOSS 消失后还有分身存活)特例
-	if (!vars.waiting && current.enemyid == 60 && current.stage == 2 && current.myhp > 128 &&
-	    ((current.enemyhp == 0 && current.secondenemyhp == 14) || (current.enemyhp == 14 && current.secondenemyhp == 0)))
-		vars.waiting = true;
+if (!vars.waiting && current.stage == 2 && current.myhp > 128 &&
+    ((current.enemyhp == 0 && current.secondenemyhp == 14) ||
+     (current.enemyhp == 14 && current.secondenemyhp == 0)))
+{
+    vars.waiting = true;
+}
 
 	// 乌龟列车(第二敌人消失)特例
 	if (!vars.waiting && current.stage == 12 && old.secondenemyid == 33 && current.secondenemyid == 255 &&
